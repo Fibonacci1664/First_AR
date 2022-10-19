@@ -29,6 +29,14 @@ public:
 	UPROPERTY(Category = "StaticMeshComponent", VisibleAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* StaticMeshComponent;
 
+	UPROPERTY(EditAnywhere)
+	UMaterial* MyCustomMat;
+
+	virtual void PostInitializeComponents() override;
+
 	float TotalTime;
 	float TimeSinceLastPrint;
+	FVector InitialLocation;
+
+	
 };

@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "CustomARPawn.h"
+//#include "CustomARPawn.h"
 #include "GameFramework/GameModeBase.h"
 #include "CustomGameMode.generated.h"
 
@@ -18,4 +18,18 @@ class FIRST_AR_API ACustomGameMode : public AGameModeBase
 public:
 	ACustomGameMode();
 	virtual ~ACustomGameMode() = default;
+
+	virtual void StartPlay();
+
+	// These macros are essential or UE just simply crashes!
+	UFUNCTION(BlueprintCallable, Category = "Score")
+	int32 GetScore();
+	
+	UFUNCTION(BlueprintCallable, Category = "Score")
+	void SpawnCube();
+
+	int32 Score;
+	FTimerHandle Ticker;
+
+	
 };

@@ -18,10 +18,10 @@ public:
 	ACustomGameState();
 	virtual ~ACustomGameState() = default;
 
-	UFUNCTION(BlueprintCallable, Category = "Score")
+	UFUNCTION(BlueprintCallable, Category = "Get Score")
 	int32 GetScore();
 
-	UFUNCTION(BlueprintCallable, Category = "Score")
+	UFUNCTION(BlueprintCallable, Category = "Set Score")
 	void SetScore(const int32 NewScore);
 
 	int32 Score;
