@@ -23,6 +23,8 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	virtual void OnScreenTouch(const ETouchIndex::Type FingerIndex, const FVector ScreenPos);
+	bool WorldHitTest(FVector2d ScreenTouchLoc, FHitResult& HitResult);
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

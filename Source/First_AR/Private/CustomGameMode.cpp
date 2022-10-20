@@ -39,7 +39,7 @@ int32 ACustomGameMode::GetScore()
 void ACustomGameMode::SpawnCube()
 {
 	const FActorSpawnParameters SpawnInfo;
-	const FVector MyLoc(300, 0, 0);
+	const FVector MyLoc(900, 0, 0);
 	const FRotator MyRot(0, 0, 0);
 	ACustomARActor* CustomARActor = GetWorld()->SpawnActor<ACustomARActor>(MyLoc, MyRot, SpawnInfo);
 }
